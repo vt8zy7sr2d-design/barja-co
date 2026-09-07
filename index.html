@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Barja & Co | Home Design Luxe Maroc</title>
+
+<meta name="description" content="Barja & Co - Design intérieur luxe au Maroc. Disponible 24h/24. Transformez votre espace avec élégance.">
+<meta name="keywords" content="design intérieur Maroc, décoration luxe, rénovation maison, Barja & Co">
+<meta name="author" content="Barja & Co">
+
+<meta property="og:title" content="Barja & Co | Design Luxe">
+<meta property="og:description" content="Création d'intérieurs haut de gamme au Maroc.">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --gold: #D4AF37;
+    --dark: #3E3B32;
+    --bg: #FFFDF5;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:Montserrat;
+    background:var(--bg);
+    color:var(--dark);
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    background:white;
+    z-index:1000;
+}
+
+.logo{font-family:Playfair Display;font-size:1.5rem}
+
+.menu-toggle{display:none;font-size:1.5rem;cursor:pointer}
+
+.nav-links a{
+    margin-left:20px;
+    text-decoration:none;
+    color:var(--dark);
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+    color:var(--gold);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 40px;
+    background:var(--gold);
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+/* SECTIONS */
+section{padding:80px 20px;text-align:center}
+
+/* CONTACT */
+.contact a{display:block;margin:10px 0;color:var(--dark)}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:var(--dark);
+    color:white;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        right:0;
+        background:white;
+        width:200px;
+    }
+
+    .nav-links.active{display:flex}
+
+    .menu-toggle{display:block}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Barja & Co</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="menu">
+        <a href="#home">Home</a>
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section id="home" class="hero">
+    <div>
+        <h1>Barja & Co</h1>
+        <p>Luxury Interior Design</p>
+        <a href="#contact" class="btn">Demander un devis</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>À propos</h2>
+    <p>Nous créons des espaces élégants et uniques adaptés à votre style de vie.</p>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <p>Design intérieur | Décoration | Rénovation</p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+
+    <a href="tel:0780017728">📞 07 80 01 77 28</a>
+    <a href="mailto:barjaandco@gmail.com">✉️ barjaandco@gmail.com</a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/212780017728" class="btn">WhatsApp</a>
+
+    <!-- FORM -->
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+        <input type="text" name="name" placeholder="Nom" required><br><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <textarea name="message" placeholder="Votre projet..." required></textarea><br><br>
+        <button type="submit" class="btn">Envoyer</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Barja & Co - Tous droits réservés
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
